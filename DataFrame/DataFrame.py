@@ -2,8 +2,8 @@
 
 # namespace: DataFrame
 
-from flatbuffers.python import flatbuffers
-from flatbuffers.python.flatbuffers.compat import import_numpy
+import flatbuffers
+from flatbuffers.compat import import_numpy
 np = import_numpy()
 
 class DataFrame(object):
