@@ -3,7 +3,6 @@ import hashlib
 import pandas as pd
 import types
 import os
-from flatbuffers.python.flatbuffers import Builder
 from multiprocessing import shared_memory
 
 from fb_dataframe import to_flatbuffer, fb_dataframe_head, fb_dataframe_group_by_sum, fb_dataframe_map_numeric_column
