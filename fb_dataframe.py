@@ -1,4 +1,5 @@
-from flatbuffers.python.flatbuffers import Builder
+# from flatbuffers.python.flatbuffers import Builder
+from flatbuffers import Builder
 import pandas as pd
 import struct
 import time
