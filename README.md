@@ -38,3 +38,20 @@ The Flatbuffer definition follows a *columnar layout* as illustrated below:
 ## Performing Grouped Aggregation on Flatbuffer-serialized Dataframes
 
 ## Modifying Flatbuffer-serialized Dataframes In-place via map
+
+## Results (In wall time, which includes CPU (user+system) + wait times)
+```
++---------------+-------------+----------------+
+| Operation     | Pickle      | Flatbuffer     |
++---------------+-------------+----------------+
+| Serialization | 5.26 s      | 1.3 ms         |
++---------------+-------------+----------------+
+| Head          | 236 ms      | 211 ms         |
++---------------+-------------+----------------+
+| GroupBy       | 359 ms      | 210 ms         |
++---------------+-------------+----------------+
+| Map/Apply     | 4.97 s      | 238 ms         |
++---------------+-------------+----------------+
+
+```
+Note: In case of map we modify the flatbuffer in place
